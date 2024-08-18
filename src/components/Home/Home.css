@@ -1,0 +1,126 @@
+.Home-div {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.home_text-wrapper p {
+    font-size: 50px;
+    color: white;
+}
+
+.home_text-wrapper span {
+    color: orange;
+}
+
+.home_text-wrapper div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.student-image {
+    height: 275px;
+    width: 275px;
+    object-fit: cover;
+}
+
+.student-image-div {
+    padding: 25px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Medium screens (tablets) */
+@media only screen and (max-width: 768px) {
+    .Home-div {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .home_text-wrapper p {
+        font-size: 40px;
+    }
+
+    .student-image {
+        height: 220px;
+        width: 220px;
+    }
+    .home_text-wrapper div {
+        flex-direction: row;
+    }
+}
+
+/* Small screens (phones) */
+@media only screen and (max-width: 520px) {
+    .home_text-wrapper {
+        padding: 10px;
+    }
+
+    .home_text-wrapper p {
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .home_text-wrapper div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .student-image {
+        height: 180px;
+        width: 180px;
+    }
+
+    .student-image-div {
+        padding: 15px;
+    }
+
+    .home_text-wrapper div {
+        flex-direction: row;
+    }
+}
+  
+.home_text-wrapper {
+    text-align: center;
+}
+  
+.typing-animation {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid orange; /* Cursor effect */
+    animation: typing 4.5s steps(30) 1s infinite normal both;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 83%; }
+}
+
+@keyframes blink {
+    from { border-color: orange; }
+    to { border-color: transparent; }
+}
+
+.fade-in-animation {
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 3s ease-in infinite;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+  
+  
+
+  
+  

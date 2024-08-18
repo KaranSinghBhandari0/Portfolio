@@ -1,0 +1,121 @@
+.skills-div {
+    min-height: 100vh;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.skills-div-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.skills-image {
+    height: 300px;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: #ccc 0px 5px 15px;
+    max-width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.all-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+    gap: 40px;
+}
+
+/* Individual skill div */
+.all-skills div {
+    height: 60px;
+    width: 65px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.all-skills img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.skill-image {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+  
+.hover-text {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00ffc8;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none; 
+    white-space: nowrap; 
+}
+  
+.skill-image:hover .hover-text {
+    display: block;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    .all-skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-image {
+        height: 200px;
+        width: 300px;
+    }
+
+    .skills-div-content {
+        flex-direction: column;
+    }
+
+    .all-skills {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .all-skills div {
+        height: 40px;
+        width: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .skills-image {
+        height: 150px;
+        width: 100%;
+    }
+
+    .all-skills {
+        gap: 40px;
+    }
+
+    .all-skills div {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+  

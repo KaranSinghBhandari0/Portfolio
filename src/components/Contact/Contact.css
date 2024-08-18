@@ -1,0 +1,62 @@
+.contact-div-parent {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-div {
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    gap: 100px;
+}
+
+.social-media-icons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.social-media-icons i {
+    font-size: 22px;
+    color: #ccc;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.social-media-icons i:hover {
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+form input, form textarea {
+    width: 100%;
+    background: #262626;
+    padding: 8px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+}
+
+form button {
+    background-color: #ff004f !important;
+    border: none !important;
+    color: white !important;
+}
+
+@media (max-width: 768px) {
+    .contact-div {
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 516px) {
+    .contact-div {
+        padding: 30px;
+    }
+}
