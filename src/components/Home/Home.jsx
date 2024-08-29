@@ -17,7 +17,7 @@ export default function Home() {
         <br />
         <div>
           <a href='mailto:kb632126@gmail.com' className='btn btn-warning'>Hire me</a>
-          <a href='https://drive.google.com/drive/u/0/folders/1ZA3txnVTHautvjyepC76FI1mrFdEARoh'>Resume</a>
+          <a href='https://drive.google.com/drive/u/0/folders/1ZA3txnVTHautvjyepC76FI1mrFdEARoh' className='btn btn-warning'>Resume</a>
         </div>
       </div>
       <div className='student-image-div'>
