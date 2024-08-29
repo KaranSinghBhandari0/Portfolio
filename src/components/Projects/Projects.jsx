@@ -1,6 +1,8 @@
 import React, { useState,useEffect } from 'react';
 import './Projects.css';
 import AOS from 'aos';
+import eCommerce from './e-commerce.jpg'
+import recipe from './recipe.jpg'
 
 export default function Projects() {
   const [showWork, setShowWork] = useState(false);
@@ -19,7 +21,7 @@ export default function Projects() {
         <h1 className="sub-title">My Work</h1>
         <div className="work-list">
           <div className="work" id="work1">
-            <img src="https://camo.githubusercontent.com/bf1377c608d3722bf4f6b04698b1079b7362de3f7b54b8c342ccf1ef56792f3e/68747470733a2f2f6d616b6573646967692e636f6d2f7265636970654170702f7265636970652d626e2e6a7067" alt="Work 1" />
+            <img src={recipe} alt="Work 1" style={{maxWidth:'300px'}} />
             <div className="layer">
               <h3>Mom's Kitchen</h3>
               <p>A recipe website made using react and food API. The application uses an External API to fetch the food recipe.</p>
@@ -29,7 +31,7 @@ export default function Projects() {
           
           {showWork && (
             <div className="work" id="work2">
-              <img src="https://camo.githubusercontent.com/bf1377c608d3722bf4f6b04698b1079b7362de3f7b54b8c342ccf1ef56792f3e/68747470733a2f2f6d616b6573646967692e636f6d2f7265636970654170702f7265636970652d626e2e6a7067" alt="Work 2" />
+              <img src="https://s01.holidaybest.com/get/83/f6/c5/5198ddc2ba222c88fe779672776274bbd5b26a820cfa3c19813935916d/BookNow_1_Inst_1080x1080+(1).png" alt="Work 2" style={{maxWidth:'300px'}} />
               <div className="layer">
                 <h3>TravelTide</h3>
                 <p>A end to end web application that provides users to book, add holiday sites online. This platform allows users to effortlessly browse, book, and review holiday destinations</p>
@@ -40,7 +42,7 @@ export default function Projects() {
 
           {showWork && (
             <div className="work" id="work3">
-              <img src="https://camo.githubusercontent.com/bf1377c608d3722bf4f6b04698b1079b7362de3f7b54b8c342ccf1ef56792f3e/68747470733a2f2f6d616b6573646967692e636f6d2f7265636970654170702f7265636970652d626e2e6a7067" alt="Work 3" />
+              <img src={eCommerce} alt="Work 3" style={{maxWidth:'300px'}} />
               <div className="layer">
                 <h3>E-commerce</h3>
                 <p>Web application, built with the MERN stack, for purchasing PC components. This platform offers a user-friendly interface for customers to browse and buy a variety of PC hardware, while administrators have the ability to manage and add new components to the inventory.</p>

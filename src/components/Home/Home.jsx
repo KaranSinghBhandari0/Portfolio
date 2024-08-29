@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import './Home.css';
 import student_image from './student_image.png';
 import AOS from 'aos';
-import 'aos/dist/aos.css';
-import resume from '../../assets/Resume.pdf'
+import 'aos/dist/aos.css'
 
 export default function Home() {
   useEffect(() => {
@@ -18,7 +17,7 @@ export default function Home() {
         <br />
         <div>
           <a href='mailto:kb632126@gmail.com' className='btn btn-warning'>Hire me</a>
-          <a href={resume} className='btn btn-warning' download='resume.pdf'>Resume</a>
+          <a href='https://drive.google.com/drive/u/0/folders/1ZA3txnVTHautvjyepC76FI1mrFdEARoh'>Resume</a>
         </div>
       </div>
       <div className='student-image-div'>
