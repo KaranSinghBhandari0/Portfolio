@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    scroll-behavior: smooth;
+}
+
+/* Projects CSS */
+
+#projects {
+    background-image: linear-gradient(to top right, #8B5CF6, #EC4899);
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    overflow: hidden;
+}
+
+/* Slider container styles */
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Slider styles */
+.slider {
+    position: relative;
+    width: 1280px;
+    height: 370px;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+/* Individual slide styles */
+.item {
+    position: absolute;
+    width: 275px;
+    height: 370px;
+    text-align: justify;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.5s, opacity 0.5s;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform-origin: center center;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) scale(0.6) rotateY(0deg);
+    opacity: 0.5; /* Faded out for side slides */
+}
+
+/* Center slide */
+.item.active {
+    transform: translate(-50%, -50%) scale(1) rotateY(0deg);
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Left slide */
+.item.left {
+    transform: translate(-150%, -50%) scale(0.8) rotateY(30deg);
+    opacity: 0.7;
+    z-index: 1;
+}
+
+/* Right slide */
+.item.right {
+    transform: translate(50%, -50%) scale(0.8) rotateY(-30deg);
+    opacity: 0.7;
+    z-index: 1;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.5rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+}
+
+.card-text {
+    font-size: 0.8rem;
+    color: rgb(91, 90, 90);
+    text-align: justify;
+    line-height: 1.4;
+    overflow-y: auto;
+    max-height: 120px;
+    padding-right: 0.5rem;
+    padding-top: 5px;
+}
+
+/* Custom Scrollbar for card text */
+.card-text::-webkit-scrollbar {
+    width: 5px;
+}
+
+.card-text::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.card-text::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
+
+.card-links {
+    margin-top: 1rem;
+}
+
+
+/* About CSS */
+
+.experience {
+    padding: 25px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+/* Timeline Styling */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Timeline vertical line */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: #ff6f61;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Timeline containers */
+.container {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Positioning left and right containers */
+.container.left {
+    left: 0;
+    text-align: right;
+}
+
+.container.right {
+    left: 50%;
+    text-align: left;
+}
+
+/* Circular markers on timeline */
+.container::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff6f61;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    top: 25px;
+    right: -10px;
+    z-index: 1;
+}
+
+.container.right::before {
+    left: -10px;
+}
+
+/* Content Box */
+.content {
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Tag Styling */
+.tag h2 {
+    font-size: 1.3rem;
+    color: #ff6f61;
+    margin: 0 0 10px;
+}
+
+/* Description Styling */
+.desc h4 {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.872);
+    margin: 0 0 5px;
+}
+
+.desc p {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 20px;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 20px;
+    }
+
+    .container.left, .container.right {
+        left: 0;
+        text-align: left;
+    }
+
+    .container::before, 
+    .container.right::before {
+        left: 10px;
+        right: auto;
+    }
+}
+
+
+
+/* home */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+  
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+  
+.typing-animation {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    border-right: 3px solid orange;
+    animation: typing 5s steps(30) 1s infinite normal both;
+}
+  
