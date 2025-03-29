@@ -46,74 +46,74 @@ export default function Projects() {
     useEffect(() => {
         const items = sliderRef.current.querySelectorAll(".item");
         items.forEach((item, index) => {
-        item.classList.remove("active", "left", "right");
-        if (index === activeIndex) {
-            item.classList.add("active");
-        } else if (index === (activeIndex - 1 + items.length) % items.length) {
-            item.classList.add("left");
-        } else if (index === (activeIndex + 1) % items.length) {
-            item.classList.add("right");
-        }
+            item.classList.remove("active", "left", "right");
+            if (index === activeIndex) {
+                item.classList.add("active");
+            } else if (index === (activeIndex - 1 + items.length) % items.length) {
+                item.classList.add("left");
+            } else if (index === (activeIndex + 1) % items.length) {
+                item.classList.add("right");
+            }
         });
     }, [activeIndex]);
 
-  return (
-    <div className="min-h-screen pt-16 w-full" id="projects">
-        <div className="w-full max-w-7xl mx-auto p-4 text-center">
-            <p className="text-3xl font-bold">
-            Academic
-            <span className="text-green-500"> Projects </span>
-            </p>
+    return (
+        <div className="min-h-screen pt-16 w-full " id="projects">
+            <div className="w-full max-w-7xl mx-auto p-4 text-center">
+                <p className="text-3xl font-bold">
+                    Academic
+                    <span className="text-green-500"> Projects </span>
+                </p>
 
-            <div className="main-container mt-16 w-full">
-                <div className="slider-container relative">
-                    <div className="slider" ref={sliderRef}>
-                    {projects.map((project, index) => (
-                        <div
-                        className={`card item ${index === activeIndex ? "active" : ""}`}
-                        key={index}
+                <div className="main-container mt-16 w-full">
+                    <div className="slider-container relative">
+                        <div className="slider" ref={sliderRef}>
+                            {projects.map((project, index) => (
+                                <div
+                                    className={`card item ${index === activeIndex ? "active" : ""}`}
+                                    key={index}
+                                >
+                                    <img src={project.imgSrc} alt={project.title} />
+                                    <div className="card-body">
+                                        <p className="text-lg font-bold">
+                                            {project.title}
+                                        </p>
+                                        <p className="card-text">{project.description}</p>
+                                        <div className="card-links flex justify-between px-4">
+                                            <a href={project.liveDemo} className="bg-green-500 py-1 px-2 rounded-lg text-white transition-all duration-300 ease-in-out hover:bg-green-600 hover:scale-105 hover:shadow-lg">
+                                                <i className="fa-solid fa-link mr-2"></i>
+                                                Visit
+                                            </a>
+                                            <a href={project.github} className="bg-green-500 py-1 px-2 rounded-lg text-white transition-all duration-300 ease-in-out hover:bg-green-600 hover:scale-105 hover:shadow-lg">
+                                                <i className="fa-brands fa-github mr-2"></i>
+                                                Github
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Prev and Next buttons */}
+                        <button
+                            onClick={handlePrev}
+                            className="absolute left-4 top-1/2 transform -translate-y-1/2 px-12"
                         >
-                        <img src={project.imgSrc} alt={project.title} />
-                        <div className="card-body">
-                            <p className="text-lg font-bold">
-                                {project.title}
-                            </p>
-                            <p className="card-text">{project.description}</p>
-                            <div className="card-links flex justify-between px-4">
-                                <a href={project.liveDemo} className="bg-green-500 py-1 px-2 rounded-lg text-white transition-all duration-300 ease-in-out hover:bg-green-600 hover:scale-105 hover:shadow-lg">
-                                    <i className="fa-solid fa-link mr-2"></i>
-                                    Visit
-                                </a>
-                                <a href={project.github} className="bg-green-500 py-1 px-2 rounded-lg text-white transition-all duration-300 ease-in-out hover:bg-green-600 hover:scale-105 hover:shadow-lg">
-                                    <i className="fa-brands fa-github mr-2"></i>
-                                    Github
-                                </a>
-                            </div>
-                        </div>
-                        </div>
-                    ))}
+                            <i className="fa-solid fa-arrow-left text-white text-2xl"></i>
+                        </button>
+                        <button
+                            onClick={handleNext}
+                            className="absolute right-4 top-1/2 transform -translate-y-1/2 px-12"
+                        >
+                            <i className="fa-solid fa-arrow-right text-white text-2xl" ></i>
+                        </button>
                     </div>
-
-                    {/* Prev and Next buttons */}
-                    <button
-                    onClick={handlePrev}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 px-12"
-                    >
-                    <i className="fa-solid fa-arrow-left text-white text-2xl"></i>
-                    </button>
-                    <button
-                    onClick={handleNext}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 px-12"
-                    >
-                    <i className="fa-solid fa-arrow-right text-white text-2xl" ></i>
-                    </button>
+                </div>
+                <div className="flex justify-center mt-6 gap-12 lg:hidden">
+                    <i className="fa-solid fa-arrow-left text-white text-2xl" onClick={handlePrev}></i>
+                    <i className="fa-solid fa-arrow-right text-white text-2xl" onClick={handleNext}></i>
                 </div>
             </div>
-            <div className="flex justify-center mt-6 gap-12 lg:hidden">
-                <i className="fa-solid fa-arrow-left text-white text-2xl" onClick={handlePrev}></i>
-                <i className="fa-solid fa-arrow-right text-white text-2xl" onClick={handleNext}></i>
-            </div>
         </div>
-    </div>
-  );
+    );
 }

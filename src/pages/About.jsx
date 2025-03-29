@@ -1,14 +1,6 @@
-import React, { useEffect } from 'react'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from 'react'
 
 export default function About() {
-
-    useEffect(() => {
-        AOS.init({ 
-            duration: 1000 
-        });
-    }, []);
 
   return (
     <div className='min-h-screen pt-16' id='about'>

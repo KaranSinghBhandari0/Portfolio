@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Home() {
     return (
-        <div className="bg-[#e5ecfb] min-h-screen pt-20" id="home">
+        <div className="bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] min-h-screen pt-20" id="home">
             <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 md:gap-20 p-6 md:p-12">
 
                 {/* Left Section - Text Content */}
