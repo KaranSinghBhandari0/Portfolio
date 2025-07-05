@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function About() {
 
   return (
@@ -7,6 +5,17 @@ export default function About() {
         <section className="experience w-full max-w-7xl mx-auto" id="experience" data-aos="zoom-in">
             <h2 className="text-3xl mb-6 font-bold"><i className="fas fa-user text-[#ff6f61] mr-3"></i> About </h2>
             <div className="timeline">
+                <div className="container left">
+                    <div className="content">
+                        <div className="tag">
+                            <p className='font-semibold text-[#ff6f61] text-xl mb-3'>SDE Internship</p>
+                        </div>
+                        <div className="desc">
+                            <h4>Software Development Intern at Hypercode</h4>
+                            <p className='text-sm'>June 2025 - Present</p>
+                        </div>
+                    </div>
+                </div>
                 <div className="container right">
                     <div className="content">
                         <div className="tag">
