@@ -13,7 +13,7 @@ export default function Projects() {
             liveDemo: "https://emart-by-karan.vercel.app/",
         },
         {
-            title: "Chatify",
+            title: "HireMate",
             description: "HireMate is an AI-powered full-stack web application designed to help users prepare for job interviews through realistic mock sessions. It features AI interviewers tailored to job roles, progress tracking, and detailed post-interview feedback — all in one place.",
             imgSrc: "/hireMate-demo.png",
             github: "https://github.com/KaranSinghBhandari0/HireMate",
