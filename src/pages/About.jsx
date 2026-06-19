@@ -1,56 +1,72 @@
+function TimelineItem({ side, title, subtitle, date }) {
+  return (
+    <div className={`container ${side}`}>
+      <div className="content">
+        <div className="tag">
+          <p className="font-semibold text-[#ff6f61] text-xl mb-3">{title}</p>
+        </div>
+        <div className="desc">
+          <h4>{subtitle}</h4>
+          <p className="text-sm">{date}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function About() {
+  const timelineData = [
+    {
+      side: "left",
+      title: "SDE Internship",
+      subtitle: "Software Development Intern at Nykaa",
+      date: "Jan 2026 - Present",
+    },
+    {
+      side: "right",
+      title: "SDE Internship",
+      subtitle: "Software Development Intern at Hypercode",
+      date: "June 2025 - Present",
+    },
+    {
+      side: "left",
+      title: "DSA",
+      subtitle: "Learning Data Structure and Algorithms",
+      date: "2022 - Present",
+    },
+    {
+      side: "right",
+      title: "College",
+      subtitle:
+        "Joined Delhi Technological University (Mathematics and Computing)",
+      date: "Nov 2022 - Present",
+    },
+  ];
 
   return (
-    <div className='min-h-screen pt-16' id='about'>
-        <section className="experience w-full max-w-7xl mx-auto" id="experience" data-aos="zoom-in">
-            <h2 className="text-3xl mb-6 font-bold"><i className="fas fa-user text-[#ff6f61] mr-3"></i> About </h2>
-            <div className="timeline">
-                <div className="container left">
-                    <div className="content">
-                        <div className="tag">
-                            <p className='font-semibold text-[#ff6f61] text-xl mb-3'>SDE Internship</p>
-                        </div>
-                        <div className="desc">
-                            <h4>Software Development Intern at Hypercode</h4>
-                            <p className='text-sm'>June 2025 - Present</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="container right">
-                    <div className="content">
-                        <div className="tag">
-                            <p className='font-semibold text-[#ff6f61] text-xl mb-3' >Web Development</p>
-                        </div>
-                        <div className="desc">
-                            <h4>Started learning Web Development (MERN Stack)</h4>
-                            <p>2024 - Present</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="container left">
-                    <div className="content">
-                        <div className="tag">
-                            <p className='font-semibold text-[#ff6f61] text-xl mb-3' >DSA</p>
-                        </div>
-                        <div className="desc">
-                            <h4>Learning Data Structure and Algorithms </h4>
-                            <p className='text-sm'>2022 - present</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="container right">
-                    <div className="content">
-                        <div className="tag">
-                            <p className='font-semibold text-[#ff6f61] text-xl mb-3' >College</p>
-                        </div>
-                        <div className="desc">
-                            <h4>Joined Delhi Technological University (Mathematics and Computing)</h4>
-                            <p>Nov 2022 - Present</p>
-                        </div>
-                    </div>
-                </div>
-            </div>            
-        </section>
+    <div className="min-h-screen pt-16" id="about">
+      <section
+        className="experience w-full max-w-7xl mx-auto"
+        id="experience"
+        data-aos="zoom-in"
+      >
+        <h2 className="text-3xl mb-6 font-bold">
+          <i className="fas fa-user text-[#ff6f61] mr-3"></i>
+          About
+        </h2>
+
+        <div className="timeline">
+          {timelineData.map((item, index) => (
+            <TimelineItem
+              key={index}
+              side={item.side}
+              title={item.title}
+              subtitle={item.subtitle}
+              date={item.date}
+            />
+          ))}
+        </div>
+      </section>
     </div>
-  )
+  );
 }
