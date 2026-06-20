@@ -45,10 +45,6 @@ export const AppProvider = ({ children }) => {
         // Simulate submission
         setSubmitting(true);
         setTimeout(() => {
-            console.log(trimmedName);
-            console.log(trimmedEmail);
-            console.log(trimmedPhone);
-            console.log(trimmedMessage);
             toast.success('Thanks for the feedback');
             setSubmitting(false);
             // Clear form after submission

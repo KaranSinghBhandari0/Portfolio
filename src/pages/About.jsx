@@ -26,7 +26,7 @@ export default function About() {
       side: "right",
       title: "SDE Internship",
       subtitle: "Software Development Intern at Hypercode",
-      date: "June 2025 - Present",
+      date: "June 2025 - Aug 2025",
     },
     {
       side: "left",
